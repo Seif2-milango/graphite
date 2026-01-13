@@ -6,7 +6,7 @@ import { ThemedView } from '@/components/themed-view';
 export default function HomeScreen() {
   return (
     <ThemedView style={styles.container}>
-      <ThemedText>Welcome message</ThemedText>
+      <ThemedText style={styles.title}>Welcome message</ThemedText>
     </ThemedView>
   );
 }
@@ -15,13 +15,14 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     width: '100%',
     height: '100%',
     paddingHorizontal: '10%',
     paddingVertical: '20%',
   },
   title: {
-
+    fontWeight: 'bold',
+    fontSize: 20,
   },
 });
