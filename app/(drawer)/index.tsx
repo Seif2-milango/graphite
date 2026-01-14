@@ -8,6 +8,11 @@ import { InfoCards } from '@/components/ui/infoCard';
 import { Ionicons } from '@expo/vector-icons';
 import { DrawerActions, useNavigation } from '@react-navigation/native';
 
+import { AppleCarousel } from '@/components/ui/appleCarousel';
+import { Dimensions } from 'react-native';
+const SCREEN_HEIGHT = Dimensions.get('window').height;
+
+
 export default function HomeScreen() {
   const navigation = useNavigation();
 
@@ -28,8 +33,8 @@ export default function HomeScreen() {
         </TouchableOpacity>
       </ThemedView>
 
-      <ScrollView style={{ width: '100%' }} contentContainerStyle={{ alignItems: 'center', paddingBottom: 50 }}>
-        <ThemedView style={{ gap: 50, width: '100%', alignItems: 'center', paddingTop: 20 }}>
+      <ScrollView style={{ width: '100%' }} contentContainerStyle={{ alignItems: 'center', paddingBottom: 50, flexGrow: 1 }}>
+        <ThemedView style={{ gap: 50, width: '100%', alignItems: 'center', paddingVertical: 40 }}>
           <InfoCards
             title="The new iPhone 17 Pro"
             description="Take a look at groundbreaking technology"
@@ -48,12 +53,44 @@ export default function HomeScreen() {
             imageUrl={require('@/assets/images/mac2.png')}
           />
         </ThemedView>
+
+        <ThemedView style={styles.container2}>
+          <ThemedText style={styles.page2title}>Designed for performance</ThemedText>
+
+          <AppleCarousel data={[
+            {
+              id: '1',
+              title: 'iPhone 17 Pro',
+              caption: 'The most advanced iPhone ever.',
+              image: require('@/assets/images/blackAP.webp'),
+            },
+            {
+              id: '2',
+              title: 'AirPods Pro 3',
+              caption: 'Experience sound like never before.',
+              image: require('@/assets/images/appleWatch.jpg'),
+            },
+            {
+              id: '3',
+              title: 'MacBook Air M3',
+              caption: 'Powerful performance in a sleek design.',
+              image: require('@/assets/images/phone.jpg'),
+            },
+          ]} />
+        </ThemedView>
       </ScrollView>
     </ThemedView>
   );
 }
 
 const styles = StyleSheet.create({
+  page2title: {
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 24,
+    marginTop: 70,
+    marginBottom: 70,
+  },
   container: {
     flexDirection: 'column',
     alignItems: 'center',
@@ -61,6 +98,15 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: 'white',
     flex: 1,
+  },
+  container2: {
+    backgroundColor: 'black',
+    width: '100%',
+    height: SCREEN_HEIGHT,
+    marginTop: 30,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    flexDirection: 'column',
   },
   title: {
     fontWeight: 'bold',
