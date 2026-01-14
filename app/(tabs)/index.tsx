@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     width: '100%',
     padding: 5,
-    paddingTop: 50,
+    paddingTop: '20%',
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
