@@ -17,7 +17,7 @@ export function InfoCards({ title, description, imageUrl }: InfoCardsProps) {
             <Image source={imageUrl} style={styles.backgroundImage} />
 
             <LinearGradient
-            colors={['rgba(0,0,0,0.45)', 'rgba(0,0,0,0.0)']}
+            colors={['rgba(0, 0, 0, 0.77)', 'rgba(0,0,0,0.0)']}
             start={{ x: 0.5, y: 1 }}
             end={{ x: 0.5, y: 0 }}
             style={styles.tint}
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 0,
     width: '100%',
-    height: '70%',
+    height: '80%',
     backgroundColor: 'rgba(0, 0, 0, 0)',
   },
   texts: {

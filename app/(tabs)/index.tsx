@@ -19,11 +19,25 @@ export default function HomeScreen() {
         <ThemedText style={styles.title}>Apple</ThemedText>
       </ThemedView>
 
-      <InfoCards
-        title="The new iPhone 17 Pro"
-        description="Take a look at groundbreaking technology"
-        imageUrl={require('@/assets/images/iPhone-17-Colors.jpg')}
-      />
+      <ThemedView style={{ gap: 50, width: '100%', alignItems: 'center' }}>
+        <InfoCards
+          title="The new iPhone 17 Pro"
+          description="Take a look at groundbreaking technology"
+          imageUrl={require('@/assets/images/iPhone-17-Colors.jpg')}
+        />
+
+        <InfoCards
+          title="Airpods Pro 3"
+          description="Music like you've never heard before"
+          imageUrl={require('@/assets/images/airpods.jpg')}
+        />
+
+        <InfoCards
+          title="Your new best friend"
+          description="Be more productive with new and powerful Mac"
+          imageUrl={require('@/assets/images/mac2.png')}
+        />
+      </ThemedView>
     </ThemedView>
   );
 }
