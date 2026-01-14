@@ -3,6 +3,8 @@ import { Image, StyleSheet } from 'react-native';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 
+import { InfoCards } from '@/components/ui/infoCard';
+
 export default function HomeScreen() {
   return (
     <ThemedView style={styles.container}>
@@ -16,6 +18,12 @@ export default function HomeScreen() {
           resizeMode="contain"
         />
       </ThemedView>
+
+      <InfoCards
+        title="Welcome to the EXPO application"
+        description="This is a sample description for the info card."
+        imageUrl={require('@/assets/images/favicon.png')}
+      />
     </ThemedView>
   );
 }
@@ -37,6 +45,7 @@ const styles = StyleSheet.create({
   titleWrapper: {
     flexDirection: 'row',
     paddingHorizontal: '5%',
+    marginBottom: 30,
     alignItems: 'center',
     justifyContent: 'space-between',
     width: '100%',
