@@ -10,19 +10,19 @@ export default function HomeScreen() {
     <ThemedView style={styles.container}>
 
       <ThemedView style={styles.titleWrapper}>
-        <ThemedText style={styles.title}>Welcome to the EXPO application</ThemedText>
-
         <Image
-          source={require('@/assets/images/android-icon-monochrome.png')}
-          style={{ width: 80, height: 80, }}
+          source={require('@/assets/images/apple-icon.png')}
+          style={styles.image}
           resizeMode="contain"
         />
+
+        <ThemedText style={styles.title}>Apple</ThemedText>
       </ThemedView>
 
       <InfoCards
-        title="Welcome to the EXPO application"
-        description="This is a sample description for the info card."
-        imageUrl={require('@/assets/images/favicon.png')}
+        title="The new iPhone 17 Pro"
+        description="Take a look at groundbreaking technology"
+        imageUrl={require('@/assets/images/iPhone-17-Colors.jpg')}
       />
     </ThemedView>
   );
@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
   titleWrapper: {
     flexDirection: 'row',
     paddingHorizontal: '5%',
+    paddingBottom: '5%',
     marginBottom: 30,
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -58,6 +59,9 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
-    elevation: 5,
   },
+  image: {
+    width: 50,
+    height: 50,
+  }
 });
