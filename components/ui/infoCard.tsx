@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: '#ededed',
     width: '90%',
-    height: 150,
+    height: 160,
     borderRadius: 20,
     overflow: 'hidden',
     justifyContent: 'flex-end',
